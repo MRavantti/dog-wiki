@@ -5,6 +5,11 @@ declare(strict_types=1);
 // Register plugin helpers.
 require template_path('includes/plugins/plate.php');
 
+require get_template_directory()."/post-types/dogs.php";
+
+require get_template_directory().'/taxonomies/dogGroups.php';
+
+
 // Set theme defaults.
 add_action('after_setup_theme', function () {
     // Disable the admin toolbar.
