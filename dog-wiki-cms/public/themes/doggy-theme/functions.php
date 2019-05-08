@@ -5,10 +5,33 @@ declare(strict_types=1);
 // Register plugin helpers.
 require template_path('includes/plugins/plate.php');
 
-require get_template_directory()."/post-types/dogs.php";
+require get_template_directory().'/post-types/dogs.php';
 
 require get_template_directory().'/taxonomies/dogGroups.php';
 
+
+add_action('rest_api_init', 'dog_cpt');
+function dog_cpt() {
+    $args = [
+        'public' => true,
+        'show_in_rest' => true,
+        'label' => 'dog'
+    ];
+    register_post_type('dog', $args);
+};
+
+
+function my_rest_dog($data, $post, $request) {
+    $_data = $data->data;
+    $fields = get_fields($post->ID);
+    foreach ($fields as $key => $value) {
+        $_data[$key] = get_field($key, $post->ID);
+    }
+    $data->data = $_data;
+    return $data;
+};
+
+add_filter('rest_prepare_dog', 'my_rest_dog', 10, 3);
 
 // Set theme defaults.
 add_action('after_setup_theme', function () {
