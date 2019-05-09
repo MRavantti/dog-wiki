@@ -21,7 +21,7 @@ export class Dogs extends Component {
     const { dogs, isLoaded } = this.state;
     if (isLoaded) {
       return (
-        <div>
+        <div id="dog-container">
           { dogs.map(dog => (
             <DogItem key={dog.id} dog={dog} />
           ))}

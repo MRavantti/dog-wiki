@@ -7,7 +7,7 @@ export class DogItem extends Component {
     const { id, title, excerpt, image, dog_group } = this.props.dog;
     
     return (
-      <div>
+      <div id={title.rendered}>
         <img src={image.url} alt={title.rendered} />
         <h2>{title.rendered}</h2>
         <h3>{ dog_group }</h3>

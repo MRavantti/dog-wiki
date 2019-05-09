@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
@@ -19,19 +19,24 @@ export class DogPage extends Component {
   }
 
   render() {
-    console.log(this.state);
-    
     const { dog, isLoaded } = this.state;
 
     if (isLoaded) {
       return (
-        <div>
+        <div id="dog-container">
+
+        <button>
           <Link to='/'>Go Back</Link>
+        </button>
+
+          <div id={dog.title.rendered}>
+
           <img src={dog.image.url} alt={dog.title.rendered} />
           <h2>{dog.title.rendered}</h2>
           <h3>{dog.dog_group}</h3>
 
           <p dangerouslySetInnerHTML={{ __html: dog.content.rendered }} />
+          </div>
         </div>
       )
     }
