@@ -8,7 +8,7 @@ export class DogItem extends Component {
     
     return (
       <div className="dog-card">
-      <div id={title.rendered}>
+
         <img src={image.url} alt={title.rendered} />
         <h2>{title.rendered}</h2>
         <h3>{ dog_group }</h3>
@@ -17,7 +17,6 @@ export class DogItem extends Component {
           <Link to={`/dog/${id}`}>
             <button>Read more</button>
           </Link>
-      </div>
       </div>
     )
   }
