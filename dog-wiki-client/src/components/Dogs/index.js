@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import DogItem from '../DogItem';
 import axios from 'axios';
 
 export class Dogs extends Component {
@@ -17,13 +18,19 @@ export class Dogs extends Component {
     };
 
   render() {
-    console.log(this.state);
+    const { dogs, isLoaded } = this.state;
+    if (isLoaded) {
+      return (
+        <div>
+          { dogs.map(dog => (
+            <DogItem key={dog.id} dog={dog} />
+          ))}
+        </div>
+    );
+  }
+  
+  return <h4>Loading...</h4>;
     
-    return (
-      <div>
-        
-      </div>
-    )
   }
 }
 
