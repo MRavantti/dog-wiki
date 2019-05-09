@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
-import DogItem from '../DogItem';
+import DogCard from '../DogCard';
 import axios from 'axios';
+import './Dogs.css';
 
 export class Dogs extends Component {
     state = {
@@ -23,7 +24,7 @@ export class Dogs extends Component {
       return (
         <div id="dog-container">
           { dogs.map(dog => (
-            <DogItem key={dog.id} dog={dog} />
+            <DogCard key={dog.id} dog={dog} />
           ))}
         </div>
     );
