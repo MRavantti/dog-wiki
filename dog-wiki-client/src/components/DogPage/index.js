@@ -24,10 +24,9 @@ export class DogPage extends Component {
     if (isLoaded) {
       return (
         <div id="dog-container">
-
-        <button>
-          <Link to='/'>Go Back</Link>
-        </button>
+          <Link to='/'>
+            <button>Go Back</button>
+          </Link>
 
           <div id="card">
 

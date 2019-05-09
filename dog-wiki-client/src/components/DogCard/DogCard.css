@@ -14,6 +14,7 @@ button {
     padding: 10px;
     font-weight: bold;
     border-radius: 3px;
+    color: whitesmoke;
 }
 
 button:active {
@@ -23,7 +24,6 @@ button:active {
 
 a {
     text-decoration: none;
-    color: whitesmoke;
 }
 
 @media (max-width: 500px) {

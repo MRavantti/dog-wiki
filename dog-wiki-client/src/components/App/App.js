@@ -8,6 +8,7 @@ function App() {
   return (
     <Router>
       <Fragment>
+        <h1>Dog Wiki</h1>
           <Route exact path='/' component={Dogs} />
           <Route exact path='/dog/:id' component={DogPage} />
       </Fragment>

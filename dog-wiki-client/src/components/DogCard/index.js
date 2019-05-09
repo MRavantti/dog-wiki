@@ -14,9 +14,9 @@ export class DogItem extends Component {
         <h3>{ dog_group }</h3>
         <p dangerouslySetInnerHTML={{__html: excerpt.rendered }} />
         
-        <button>
-        <Link to={`/dog/${id}`} >Read more</Link>
-        </button>
+          <Link to={`/dog/${id}`}>
+            <button>Read more</button>
+          </Link>
       </div>
       </div>
     )
