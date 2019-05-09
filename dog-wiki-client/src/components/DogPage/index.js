@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-
+import './DogPage.css';
 
 export class DogPage extends Component {
   state = {
@@ -29,7 +29,7 @@ export class DogPage extends Component {
           <Link to='/'>Go Back</Link>
         </button>
 
-          <div id={dog.title.rendered}>
+          <div id="card">
 
           <img src={dog.image.url} alt={dog.title.rendered} />
           <h2>{dog.title.rendered}</h2>

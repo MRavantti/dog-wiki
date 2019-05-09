@@ -1,10 +1,33 @@
 .dog-card {
     margin: 10px auto;
     width: 30vw;
-    background: aliceblue;
+    background: whitesmoke;
     padding: 10px;
 }
 
 img {
     max-width: 30vw;
+}
+
+button {
+    background: black;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+button:active {
+    transform: scale(.9);
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+@media (max-width: 500px) {
+    .dog-card {
+        width: 100vw;
+    }
 }
