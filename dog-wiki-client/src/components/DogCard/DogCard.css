@@ -1,0 +1,10 @@
+.dog-card {
+    margin: 10px auto;
+    width: 30vw;
+    background: aliceblue;
+    padding: 10px;
+}
+
+img {
+    max-width: 30vw;
+}

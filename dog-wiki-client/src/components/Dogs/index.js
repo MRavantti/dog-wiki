@@ -10,7 +10,7 @@ export class Dogs extends Component {
     };
 
     componentDidMount() {
-        axios.get('http://dog-wiki-cms.test/wp-json/wp/v2/dog')
+      axios.get('http://dog-wiki-cms.test/wp-json/wp/v2/dog/?page=1&per_page=25')
             .then(res => this.setState({
                 dogs: res.data,
                 isLoaded: true
