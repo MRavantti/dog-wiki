@@ -1,13 +1,18 @@
 import React from 'react';
-import Dogs from '../Dogs'
 import './App.css';
+import Dogs from '../Dogs'
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
       <h1>App</h1>
-      <Dogs />
-    </div>
+      
+          <Route exact path='/' component={Dogs} />
+
+        </div>
+    </Router>
   );
 }
 
