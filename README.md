@@ -1,4 +1,4 @@
-# PHOTOIFY
+# Dog-Wiki
 <img src="https://media.giphy.com/media/mCRJDo24UvJMA/giphy.gif" width="800" height="400" />
 
 Dog-Wiki
