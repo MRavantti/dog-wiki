@@ -1,11 +1,6 @@
 # Dog-Wiki
 <img src="https://media.giphy.com/media/mCRJDo24UvJMA/giphy.gif" width="800" height="400" />
 
-Dog-Wiki
---------------
-
-# Dog-wiki
-
 **Description**
 
 A WordPress assignment to create a list of dogs with ACF and present it through REST API with help of a React application.
